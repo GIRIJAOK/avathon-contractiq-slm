@@ -1,24 +1,7 @@
 {
   "contracts": 510,
-  "unique_contract_titles": 510,
-  "categories": 41,
   "questions": 20910,
-  "positive_questions": 6702,
-  "negative_questions": 14208,
-  "answer_spans": 13823,
-  "positive_question_ratio": 0.3205,
-  "contract_length_chars": {
-    "mean": 52563.01,
-    "median": 33143.0,
-    "p90": 122117.4,
-    "p95": 162491.15,
-    "max": 338211
-  },
-  "contract_length_words": {
-    "mean": 7861.19,
-    "median": 5006.0,
-    "p90": 18609.7,
-    "p95": 25203.05,
-    "max": 47733
-  }
+  "categories": 41,
+  "positive_samples": 6702,
+  "negative_samples": 14208
 }
