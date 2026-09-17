@@ -1,0 +1,50 @@
+@"
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+
+# Hugging Face cache
+.cache/
+huggingface/
+
+# Raw / generated datasets
+data/raw/
+data/processed/*.jsonl
+data/processed/*.parquet
+data/processed/*.csv
+
+# Models and checkpoints
+models/
+artifacts/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Training logs
+logs/
+wandb/
+mlruns/
+
+# OS
+.DS_Store
+Thumbs.db
+"@ | Set-Content .gitignore
