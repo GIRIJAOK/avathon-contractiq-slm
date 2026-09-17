@@ -43,7 +43,14 @@ def extract_records(data, selected_categories):
                     continue
 
                 answers = qa.get("answers", [])
-                answer_texts = [answer["text"] for answer in answers]
+
+                answer_data = [
+                    {
+                        "text": answer["text"],
+                        "answer_start": answer["answer_start"],
+                    }
+                    for answer in answers
+                ]
 
                 rows.append(
                     {
@@ -53,7 +60,7 @@ def extract_records(data, selected_categories):
                         "context": context,
                         "is_positive": len(answers) > 0,
                         "answers": json.dumps(
-                            answer_texts,
+                            answer_data,
                             ensure_ascii=False,
                         ),
                     }
@@ -82,7 +89,7 @@ def main():
         random_state=RANDOM_SEED,
     )
 
-    # Temporary split is divided equally:
+    # Remaining 30% is divided equally:
     # 15% validation and 15% test
     val_contracts, test_contracts = train_test_split(
         temp_contracts,
@@ -94,7 +101,7 @@ def main():
     val_contracts = set(val_contracts)
     test_contracts = set(test_contracts)
 
-    # Make sure there is no contract leakage
+    # Ensure no contract appears in more than one split
     assert train_contracts.isdisjoint(val_contracts)
     assert train_contracts.isdisjoint(test_contracts)
     assert val_contracts.isdisjoint(test_contracts)
