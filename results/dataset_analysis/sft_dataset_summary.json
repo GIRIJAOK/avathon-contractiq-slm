@@ -1,0 +1,17 @@
+{
+  "train": {
+    "total_examples": 2856,
+    "positive_examples": 1009,
+    "negative_examples": 1847
+  },
+  "validation": {
+    "total_examples": 608,
+    "positive_examples": 166,
+    "negative_examples": 442
+  },
+  "test": {
+    "total_examples": 616,
+    "positive_examples": 196,
+    "negative_examples": 420
+  }
+}
