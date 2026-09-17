@@ -1,0 +1,11 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "examples": 2856,
+  "min_tokens": 358,
+  "median_tokens": 1443,
+  "p90_tokens": 1583,
+  "p95_tokens": 1636,
+  "p99_tokens": 1763,
+  "max_tokens": 2557,
+  "recommended_max_seq_length": 3072
+}
