@@ -1,4 +1,3 @@
-
 import json
 from pathlib import Path
 
@@ -25,8 +24,6 @@ def main():
 
         for paragraph in contract["paragraphs"]:
             for qa in paragraph["qas"]:
-
-                question = qa["question"]
                 answers = qa.get("answers", [])
 
                 # CUAD question IDs contain the clause/category name
@@ -36,7 +33,7 @@ def main():
                     {
                         "contract": contract_name,
                         "category": category,
-                        "question": question,
+                        "question": qa["question"],
                         "is_positive": len(answers) > 0,
                         "answer_count": len(answers),
                     }
@@ -44,21 +41,30 @@ def main():
 
     df = pd.DataFrame(rows)
 
+    # Dataset summary
+    dataset_summary = {
+        "contracts": int(df["contract"].nunique()),
+        "questions": int(len(df)),
+        "categories": int(df["category"].nunique()),
+        "positive_samples": int(df["is_positive"].sum()),
+        "negative_samples": int((~df["is_positive"]).sum()),
+    }
+
     print("\nCUAD DATASET SUMMARY")
     print("-" * 40)
 
-    print(f"Contracts        : {df['contract'].nunique()}")
-    print(f"Questions        : {len(df)}")
-    print(f"Categories       : {df['category'].nunique()}")
-    print(f"Positive samples : {df['is_positive'].sum()}")
-    print(f"Negative samples : {(~df['is_positive']).sum()}")
+    print(f"Contracts        : {dataset_summary['contracts']}")
+    print(f"Questions        : {dataset_summary['questions']}")
+    print(f"Categories       : {dataset_summary['categories']}")
+    print(f"Positive samples : {dataset_summary['positive_samples']}")
+    print(f"Negative samples : {dataset_summary['negative_samples']}")
 
+    # Category-level analysis
     category_summary = (
         df.groupby("category")
         .agg(
             total_samples=("category", "size"),
             positive_samples=("is_positive", "sum"),
-            contracts=("contract", "nunique"),
         )
         .reset_index()
     )
@@ -73,13 +79,27 @@ def main():
         / category_summary["total_samples"]
     )
 
+    # Number of contracts where the clause is actually present
+    positive_contracts = (
+        df[df["is_positive"]]
+        .groupby("category")["contract"]
+        .nunique()
+    )
+
+    category_summary["positive_contracts"] = (
+        category_summary["category"]
+        .map(positive_contracts)
+        .fillna(0)
+        .astype(int)
+    )
+
     category_summary = category_summary.sort_values(
         "positive_samples",
         ascending=False,
     )
 
     print("\nCATEGORY DISTRIBUTION")
-    print("-" * 80)
+    print("-" * 90)
 
     print(
         category_summary[
@@ -87,23 +107,29 @@ def main():
                 "category",
                 "positive_samples",
                 "negative_samples",
-                "contracts",
+                "positive_contracts",
                 "positive_ratio",
             ]
         ].to_string(index=False)
     )
 
+    # Save results
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    output_file = OUTPUT_DIR / "category_summary.csv"
-
     category_summary.to_csv(
-        output_file,
+        OUTPUT_DIR / "category_summary.csv",
         index=False,
     )
 
-    print(f"\nSaved category summary to:")
-    print(output_file)
+    with open(
+        OUTPUT_DIR / "dataset_summary.json",
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(dataset_summary, f, indent=2)
+
+    print("\nSaved EDA results to:")
+    print(OUTPUT_DIR)
 
 
 if __name__ == "__main__":
