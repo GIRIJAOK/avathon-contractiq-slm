@@ -4,7 +4,6 @@ from pathlib import Path
 import peft
 import torch
 import transformers
-import yaml
 from datasets import load_dataset
 from peft import LoraConfig, get_peft_model
 from transformers import (
@@ -18,22 +17,73 @@ from transformers import (
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-CONFIG_PATH = (
+# --------------------------------------------------
+# Experiment configuration
+# --------------------------------------------------
+
+MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
+
+TRAIN_FILE = (
     PROJECT_ROOT
-    / "configs"
-    / "dora_qwen.yaml"
+    / "data"
+    / "processed"
+    / "train_sft.jsonl"
 )
 
+VALIDATION_FILE = (
+    PROJECT_ROOT
+    / "data"
+    / "processed"
+    / "validation_sft.jsonl"
+)
 
-def load_config():
-    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+OUTPUT_DIR = (
+    PROJECT_ROOT
+    / "artifacts"
+    / "qwen_dora_r8"
+)
+
+MAX_SEQ_LENGTH = 3072
+
+# DoRA
+DORA_RANK = 8
+DORA_ALPHA = 16
+DORA_DROPOUT = 0.05
+
+TARGET_MODULES = [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj",
+]
+
+# Training
+LEARNING_RATE = 1e-4
+EPOCHS = 2
+
+BATCH_SIZE = 1
+EVAL_BATCH_SIZE = 1
+GRADIENT_ACCUMULATION_STEPS = 8
+
+WARMUP_STEPS = 0.05
+WEIGHT_DECAY = 0.01
+LR_SCHEDULER = "cosine"
+
+LOGGING_STEPS = 10
+EVAL_STEPS = 100
+SAVE_STEPS = 100
+SAVE_TOTAL_LIMIT = 2
+
+SEED = 42
 
 
-def prepare_example(example, tokenizer, max_seq_length):
+def prepare_example(example, tokenizer):
     """
-    Convert one chat example into input_ids, attention_mask
-    and labels.
+    Convert one chat example into a causal language-model
+    training example.
 
     Loss is calculated only on the assistant response.
     System and user tokens are masked with -100.
@@ -41,41 +91,60 @@ def prepare_example(example, tokenizer, max_seq_length):
 
     messages = example["messages"]
 
-    # System + user + start of assistant response
-    prompt_ids = tokenizer.apply_chat_template(
+    # System + user + assistant-generation marker
+    prompt_text = tokenizer.apply_chat_template(
         messages[:2],
-        tokenize=True,
+        tokenize=False,
         add_generation_prompt=True,
     )
 
-    # Complete conversation including gold assistant answer
-    full_ids = tokenizer.apply_chat_template(
+    # Full training conversation including gold assistant answer
+    full_text = tokenizer.apply_chat_template(
         messages,
-        tokenize=True,
+        tokenize=False,
         add_generation_prompt=False,
     )
 
-    # Our token analysis showed all training examples are
-    # below 3072, but keep truncation as a safety measure.
-    input_ids = full_ids[:max_seq_length]
+    # Chat templates already include their required special tokens,
+    # so do not add another set here.
+    prompt_ids = tokenizer(
+        prompt_text,
+        add_special_tokens=False,
+    )["input_ids"]
 
-    prompt_length = min(
-        len(prompt_ids),
-        len(input_ids),
-    )
+    full_ids = tokenizer(
+        full_text,
+        add_special_tokens=False,
+    )["input_ids"]
 
-    if prompt_length >= len(input_ids):
+    # Do not silently truncate training targets.
+    if len(full_ids) > MAX_SEQ_LENGTH:
         raise ValueError(
-            "Assistant response was removed by truncation. "
-            "Increase max_seq_length."
+            f"Training example has {len(full_ids)} tokens, "
+            f"which exceeds MAX_SEQ_LENGTH={MAX_SEQ_LENGTH}."
         )
+
+    if len(prompt_ids) >= len(full_ids):
+        raise ValueError(
+            "No assistant response tokens found in training example."
+        )
+
+    # The prompt should be the prefix of the complete conversation.
+    if full_ids[:len(prompt_ids)] != prompt_ids:
+        raise ValueError(
+            "Prompt tokens are not aligned with the full conversation."
+        )
+
+    input_ids = full_ids
+
+    attention_mask = [1] * len(input_ids)
 
     labels = input_ids.copy()
 
-    # Ignore system + user prompt when calculating loss
-    labels[:prompt_length] = [-100] * prompt_length
-
-    attention_mask = [1] * len(input_ids)
+    # Ignore system + user tokens during loss calculation.
+    labels[:len(prompt_ids)] = (
+        [-100] * len(prompt_ids)
+    )
 
     return {
         "input_ids": input_ids,
@@ -85,6 +154,13 @@ def prepare_example(example, tokenizer, max_seq_length):
 
 
 class DataCollator:
+    """
+    Dynamically pad each batch.
+
+    Label padding uses -100 so padded tokens are ignored
+    by the causal language-model loss.
+    """
+
     def __init__(self, tokenizer):
         self.pad_token_id = tokenizer.pad_token_id
 
@@ -136,6 +212,10 @@ class DataCollator:
 
 
 def main():
+    # --------------------------------------------------
+    # Hardware checks
+    # --------------------------------------------------
+
     if not torch.cuda.is_available():
         raise RuntimeError(
             "CUDA GPU is required for DoRA fine-tuning."
@@ -143,27 +223,19 @@ def main():
 
     if not torch.cuda.is_bf16_supported():
         raise RuntimeError(
-            "This configuration expects a BF16-capable GPU."
+            "This experiment requires a BF16-capable GPU."
         )
 
-    config = load_config()
-
-    training_config = config["training"]
-    lora_config = config["lora"]
-
-    set_seed(training_config["seed"])
-
-    model_name = config["model_name"]
-    max_seq_length = config["max_seq_length"]
+    set_seed(SEED)
 
     print("\nDORA FINE-TUNING")
-    print("-" * 50)
+    print("-" * 55)
 
     print(
         f"GPU          : {torch.cuda.get_device_name(0)}"
     )
     print(
-        f"Model        : {model_name}"
+        f"Model        : {MODEL_NAME}"
     )
     print(
         f"Transformers : {transformers.__version__}"
@@ -172,13 +244,19 @@ def main():
         f"PEFT         : {peft.__version__}"
     )
     print(
-        f"Max sequence : {max_seq_length}"
+        f"Max sequence : {MAX_SEQ_LENGTH}"
     )
     print(
-        f"DoRA rank    : {lora_config['rank']}"
+        f"DoRA rank    : {DORA_RANK}"
     )
     print(
-        f"DoRA alpha   : {lora_config['alpha']}"
+        f"DoRA alpha   : {DORA_ALPHA}"
+    )
+    print(
+        f"Learning rate: {LEARNING_RATE}"
+    )
+    print(
+        f"Epochs       : {EPOCHS}"
     )
 
     # --------------------------------------------------
@@ -186,7 +264,7 @@ def main():
     # --------------------------------------------------
 
     tokenizer = AutoTokenizer.from_pretrained(
-        model_name
+        MODEL_NAME
     )
 
     if tokenizer.pad_token is None:
@@ -201,28 +279,27 @@ def main():
     print("\nLoading base model...")
 
     model = AutoModelForCausalLM.from_pretrained(
-        model_name,
+        MODEL_NAME,
         dtype=torch.bfloat16,
     )
 
-    # Required when gradient checkpointing is enabled
     model.config.use_cache = False
 
     # --------------------------------------------------
-    # DoRA adapter
+    # DoRA
     # --------------------------------------------------
 
     dora_config = LoraConfig(
-        r=lora_config["rank"],
-        lora_alpha=lora_config["alpha"],
-        lora_dropout=lora_config["dropout"],
-        target_modules=lora_config[
-            "target_modules"
-        ],
+        r=DORA_RANK,
+        lora_alpha=DORA_ALPHA,
+        lora_dropout=DORA_DROPOUT,
+
+        target_modules=TARGET_MODULES,
+
         bias="none",
         task_type="CAUSAL_LM",
 
-        # Enables DoRA
+        # This converts LoRA adaptation to DoRA.
         use_dora=True,
     )
 
@@ -231,11 +308,11 @@ def main():
         dora_config,
     )
 
-    # Important for PEFT + gradient checkpointing
+    # Required for PEFT with gradient checkpointing.
     model.enable_input_require_grads()
 
     print("\nTRAINABLE PARAMETERS")
-    print("-" * 50)
+    print("-" * 55)
 
     model.print_trainable_parameters()
 
@@ -243,22 +320,12 @@ def main():
     # Dataset
     # --------------------------------------------------
 
-    train_path = (
-        PROJECT_ROOT
-        / config["train_file"]
-    )
-
-    validation_path = (
-        PROJECT_ROOT
-        / config["validation_file"]
-    )
-
     dataset = load_dataset(
         "json",
         data_files={
-            "train": str(train_path),
+            "train": str(TRAIN_FILE),
             "validation": str(
-                validation_path
+                VALIDATION_FILE
             ),
         },
     )
@@ -271,22 +338,33 @@ def main():
         lambda example: prepare_example(
             example,
             tokenizer,
-            max_seq_length,
         ),
         remove_columns=train_columns,
         desc="Tokenizing SFT dataset",
     )
 
+    train_lengths = [
+        len(example["input_ids"])
+        for example
+        in tokenized_dataset["train"]
+    ]
+
+    validation_lengths = [
+        len(example["input_ids"])
+        for example
+        in tokenized_dataset["validation"]
+    ]
+
     print("\nDATASET")
-    print("-" * 50)
+    print("-" * 55)
 
     print(
-        "Train examples      :",
+        "Train examples            :",
         len(tokenized_dataset["train"]),
     )
 
     print(
-        "Validation examples :",
+        "Validation examples       :",
         len(
             tokenized_dataset[
                 "validation"
@@ -294,87 +372,77 @@ def main():
         ),
     )
 
-    # Quick sanity check
+    print(
+        "Maximum train tokens      :",
+        max(train_lengths),
+    )
+
+    print(
+        "Maximum validation tokens :",
+        max(validation_lengths),
+    )
+
+    # Verify that assistant tokens exist
     first_example = (
         tokenized_dataset["train"][0]
     )
 
-    trainable_label_tokens = sum(
+    assistant_tokens = sum(
         label != -100
-        for label in first_example["labels"]
+        for label
+        in first_example["labels"]
     )
 
     print(
-        "Assistant tokens in first example:",
-        trainable_label_tokens,
+        "Assistant tokens example  :",
+        assistant_tokens,
     )
 
-    if trainable_label_tokens == 0:
+    if assistant_tokens == 0:
         raise ValueError(
             "No assistant tokens are available "
-            "for loss calculation."
+            "for training loss."
         )
 
     # --------------------------------------------------
-    # Training configuration
+    # TrainingArguments
     # --------------------------------------------------
 
-    output_dir = (
-        PROJECT_ROOT
-        / config["output_dir"]
-    )
-
-    output_dir.mkdir(
+    OUTPUT_DIR.mkdir(
         parents=True,
         exist_ok=True,
     )
 
     training_args = TrainingArguments(
-        output_dir=str(output_dir),
+        output_dir=str(OUTPUT_DIR),
 
-        num_train_epochs=training_config[
-            "epochs"
-        ],
+        num_train_epochs=EPOCHS,
 
         per_device_train_batch_size=(
-            training_config[
-                "batch_size"
-            ]
+            BATCH_SIZE
         ),
 
         per_device_eval_batch_size=(
-            training_config[
-                "eval_batch_size"
-            ]
+            EVAL_BATCH_SIZE
         ),
 
         gradient_accumulation_steps=(
-            training_config[
-                "gradient_accumulation_steps"
-            ]
+            GRADIENT_ACCUMULATION_STEPS
         ),
 
-        learning_rate=training_config[
-            "learning_rate"
-        ],
+        learning_rate=LEARNING_RATE,
 
-        weight_decay=training_config[
-            "weight_decay"
-        ],
+        weight_decay=WEIGHT_DECAY,
 
-        lr_scheduler_type=training_config[
-            "lr_scheduler_type"
-        ],
+        lr_scheduler_type=LR_SCHEDULER,
 
-        # Transformers v5 uses warmup_steps.
-        # 0.05 means 5% of total training steps.
-        warmup_steps=training_config[
-            "warmup_steps"
-        ],
+        # Transformers 5.x accepts a float below 1
+        # as a fraction of total training steps.
+        warmup_steps=WARMUP_STEPS,
 
         bf16=True,
 
-        # A100 supports TF32 matrix multiplication
+        # Useful on NVIDIA A100
         tf32=True,
 
         gradient_checkpointing=True,
@@ -384,38 +452,24 @@ def main():
         },
 
         logging_strategy="steps",
-
-        logging_steps=training_config[
-            "logging_steps"
-        ],
+        logging_steps=LOGGING_STEPS,
 
         eval_strategy="steps",
-
-        eval_steps=training_config[
-            "eval_steps"
-        ],
+        eval_steps=EVAL_STEPS,
 
         save_strategy="steps",
+        save_steps=SAVE_STEPS,
 
-        save_steps=training_config[
-            "save_steps"
-        ],
-
-        save_total_limit=training_config[
-            "save_total_limit"
-        ],
+        save_total_limit=SAVE_TOTAL_LIMIT,
 
         load_best_model_at_end=True,
 
         metric_for_best_model="eval_loss",
-
         greater_is_better=False,
 
         report_to="none",
 
-        seed=training_config[
-            "seed"
-        ],
+        seed=SEED,
 
         remove_unused_columns=False,
     )
@@ -444,29 +498,29 @@ def main():
     )
 
     # --------------------------------------------------
-    # Train
+    # Training
     # --------------------------------------------------
 
     print("\nSTARTING TRAINING")
-    print("-" * 50)
+    print("-" * 55)
 
     train_result = trainer.train()
 
     # --------------------------------------------------
-    # Final evaluation
+    # Final validation loss
     # --------------------------------------------------
 
-    print("\nFINAL VALIDATION LOSS")
-    print("-" * 50)
+    print("\nFINAL VALIDATION")
+    print("-" * 55)
 
     eval_metrics = trainer.evaluate()
 
     # --------------------------------------------------
-    # Save best DoRA adapter
+    # Save DoRA adapter
     # --------------------------------------------------
 
     final_adapter_dir = (
-        output_dir
+        OUTPUT_DIR
         / "final_adapter"
     )
 
@@ -479,36 +533,64 @@ def main():
     )
 
     # --------------------------------------------------
-    # Save training metrics
+    # Save experiment metrics
     # --------------------------------------------------
 
     metrics = {
-        "model": model_name,
+        "model": MODEL_NAME,
         "peft_method": "DoRA",
-        "rank": lora_config["rank"],
-        "alpha": lora_config["alpha"],
-        "dropout": lora_config["dropout"],
-        "max_seq_length": max_seq_length,
-        "epochs": training_config["epochs"],
-        "learning_rate": training_config[
-            "learning_rate"
-        ],
-        "effective_batch_size": (
-            training_config["batch_size"]
-            * training_config[
-                "gradient_accumulation_steps"
-            ]
+
+        "rank": DORA_RANK,
+        "alpha": DORA_ALPHA,
+        "dropout": DORA_DROPOUT,
+
+        "target_modules": TARGET_MODULES,
+
+        "max_seq_length": MAX_SEQ_LENGTH,
+
+        "learning_rate": LEARNING_RATE,
+        "epochs": EPOCHS,
+
+        "batch_size": BATCH_SIZE,
+
+        "gradient_accumulation_steps": (
+            GRADIENT_ACCUMULATION_STEPS
         ),
+
+        "effective_batch_size": (
+            BATCH_SIZE
+            * GRADIENT_ACCUMULATION_STEPS
+        ),
+
+        "warmup_steps": WARMUP_STEPS,
+
         "train_loss": float(
             train_result.training_loss
         ),
+
         "eval_loss": float(
             eval_metrics["eval_loss"]
+        ),
+
+        "train_runtime_seconds": (
+            train_result.metrics.get(
+                "train_runtime"
+            )
+        ),
+
+        "gpu": torch.cuda.get_device_name(0),
+
+        "transformers_version": (
+            transformers.__version__
+        ),
+
+        "peft_version": (
+            peft.__version__
         ),
     }
 
     metrics_path = (
-        output_dir
+        OUTPUT_DIR
         / "training_metrics.json"
     )
 
@@ -524,10 +606,10 @@ def main():
         )
 
     print("\nTRAINING COMPLETE")
-    print("-" * 50)
+    print("-" * 55)
 
     print(
-        "Training loss :",
+        "Training loss   :",
         round(
             train_result.training_loss,
             4,
@@ -535,7 +617,7 @@ def main():
     )
 
     print(
-        "Validation loss:",
+        "Validation loss :",
         round(
             eval_metrics["eval_loss"],
             4,
@@ -543,12 +625,12 @@ def main():
     )
 
     print(
-        "Adapter saved :",
+        "Adapter saved   :",
         final_adapter_dir,
     )
 
     print(
-        "Metrics saved :",
+        "Metrics saved   :",
         metrics_path,
     )
 
