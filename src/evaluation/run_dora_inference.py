@@ -58,7 +58,7 @@ def main():
         )
 
     print("\nDORA VALIDATION INFERENCE")
-    print("-" * 50)
+    print("-" * 55)
 
     print(
         f"GPU     : {torch.cuda.get_device_name(0)}"
@@ -83,8 +83,10 @@ def main():
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
+    tokenizer.padding_side = "left"
+
     # --------------------------------------------------
-    # Base model
+    # Load base model
     # --------------------------------------------------
 
     print("\nLoading base model...")
@@ -96,7 +98,7 @@ def main():
     )
 
     # --------------------------------------------------
-    # Load trained DoRA adapter
+    # Load DoRA adapter
     # --------------------------------------------------
 
     print("Loading DoRA adapter...")
@@ -106,7 +108,24 @@ def main():
         ADAPTER_PATH,
     )
 
+    # --------------------------------------------------
+    # Merge DoRA into base weights
+    # --------------------------------------------------
+
+    print(
+        "Merging DoRA adapter into base model..."
+    )
+
+    model = model.merge_and_unload(
+        safe_merge=True
+    )
+
+    # Enable KV cache for generation.
+    model.config.use_cache = True
+
     model.eval()
+
+    print("DoRA merge complete.")
 
     # --------------------------------------------------
     # Validation data
@@ -126,6 +145,7 @@ def main():
     )
 
     latencies = []
+    generated_token_counts = []
 
     # --------------------------------------------------
     # Inference
@@ -139,10 +159,10 @@ def main():
 
         for record in tqdm(
             records,
-            desc="Running DoRA validation",
+            desc="Running merged DoRA validation",
         ):
-            # Use exactly the same input as the
-            # zero-shot baseline:
+            # Exactly the same information given to
+            # the zero-shot baseline:
             # system + user only.
             input_messages = (
                 record["messages"][:2]
@@ -179,6 +199,7 @@ def main():
                 time.time() - start_time
             )
 
+            # Only keep newly generated tokens.
             generated_tokens = outputs[
                 0,
                 inputs["input_ids"].shape[1]:
@@ -205,6 +226,9 @@ def main():
                     latency,
                     4,
                 ),
+                "generated_tokens": int(
+                    len(generated_tokens)
+                ),
             }
 
             output_file.write(
@@ -215,7 +239,13 @@ def main():
                 + "\n"
             )
 
-            latencies.append(latency)
+            latencies.append(
+                latency
+            )
+
+            generated_token_counts.append(
+                len(generated_tokens)
+            )
 
     # --------------------------------------------------
     # Summary
@@ -227,20 +257,45 @@ def main():
         else 0
     )
 
+    average_generated_tokens = (
+        sum(generated_token_counts)
+        / len(generated_token_counts)
+        if generated_token_counts
+        else 0
+    )
+
+    max_generated_tokens = (
+        max(generated_token_counts)
+        if generated_token_counts
+        else 0
+    )
+
     print("\nDORA INFERENCE COMPLETE")
-    print("-" * 50)
+    print("-" * 55)
 
     print(
-        f"Examples        : {len(records)}"
+        f"Examples                 : "
+        f"{len(records)}"
     )
 
     print(
-        f"Average latency : "
+        f"Average latency          : "
         f"{average_latency:.2f} seconds"
     )
 
     print(
-        f"Predictions     : {OUTPUT_PATH}"
+        f"Average generated tokens : "
+        f"{average_generated_tokens:.1f}"
+    )
+
+    print(
+        f"Maximum generated tokens : "
+        f"{max_generated_tokens}"
+    )
+
+    print(
+        f"Predictions              : "
+        f"{OUTPUT_PATH}"
     )
 
 
