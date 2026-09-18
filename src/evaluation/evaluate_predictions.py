@@ -1,3 +1,4 @@
+import argparse
 import json
 import re
 from collections import Counter
@@ -14,25 +15,65 @@ from sklearn.metrics import (
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-PREDICTIONS_PATH = (
-    PROJECT_ROOT
-    / "results"
-    / "baselines"
-    / "qwen_zero_shot_predictions.jsonl"
-)
-
-VALIDATION_PATH = (
+DEFAULT_VALIDATION_PATH = (
     PROJECT_ROOT
     / "data"
     / "processed"
     / "validation_sft.jsonl"
 )
 
-OUTPUT_DIR = (
-    PROJECT_ROOT
-    / "results"
-    / "baselines"
-)
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Evaluate contract clause predictions."
+    )
+
+    parser.add_argument(
+        "--input",
+        required=True,
+        help="Prediction JSONL file.",
+    )
+
+    parser.add_argument(
+        "--output-dir",
+        required=True,
+        help="Directory for evaluation results.",
+    )
+
+    parser.add_argument(
+        "--name",
+        required=True,
+        help="Experiment name used for output files.",
+    )
+
+    parser.add_argument(
+        "--model",
+        default="Qwen/Qwen2.5-7B-Instruct",
+        help="Model name stored in summary.",
+    )
+
+    parser.add_argument(
+        "--validation",
+        default=str(DEFAULT_VALIDATION_PATH),
+        help="Validation SFT JSONL file.",
+    )
+
+    parser.add_argument(
+        "--split",
+        default="validation",
+        help="Evaluation split name.",
+    )
+
+    return parser.parse_args()
+
+
+def resolve_path(path):
+    path = Path(path)
+
+    if path.is_absolute():
+        return path
+
+    return PROJECT_ROOT / path
 
 
 def load_jsonl(path):
@@ -57,11 +98,14 @@ def parse_prediction(text):
 
     text = text.strip()
 
+    # Plain JSON
     try:
         return json.loads(text), True
+
     except json.JSONDecodeError:
         pass
 
+    # Markdown JSON block
     cleaned = (
         text.replace("```json", "")
         .replace("```", "")
@@ -70,9 +114,11 @@ def parse_prediction(text):
 
     try:
         return json.loads(cleaned), True
+
     except json.JSONDecodeError:
         pass
 
+    # JSON embedded in extra text
     start = cleaned.find("{")
     end = cleaned.rfind("}")
 
@@ -84,6 +130,7 @@ def parse_prediction(text):
                 ),
                 True,
             )
+
         except json.JSONDecodeError:
             pass
 
@@ -91,6 +138,15 @@ def parse_prediction(text):
 
 
 def valid_schema(result):
+    """
+    Expected schema:
+
+    {
+        "present": true/false,
+        "evidence": "..." or null
+    }
+    """
+
     if not isinstance(result, dict):
         return False
 
@@ -132,8 +188,18 @@ def calculate_evidence_f1(
     predicted,
     gold,
 ):
-    predicted_tokens = tokenize(predicted)
-    gold_tokens = tokenize(gold)
+    """
+    Token-level overlap F1 between predicted
+    evidence and gold evidence.
+    """
+
+    predicted_tokens = tokenize(
+        predicted
+    )
+
+    gold_tokens = tokenize(
+        gold
+    )
 
     if not predicted_tokens:
         return 0.0
@@ -178,12 +244,38 @@ def calculate_evidence_f1(
 
 
 def main():
+    args = parse_args()
+
+    predictions_path = resolve_path(
+        args.input
+    )
+
+    validation_path = resolve_path(
+        args.validation
+    )
+
+    output_dir = resolve_path(
+        args.output_dir
+    )
+
+    if not predictions_path.exists():
+        raise FileNotFoundError(
+            f"Predictions not found: "
+            f"{predictions_path}"
+        )
+
+    if not validation_path.exists():
+        raise FileNotFoundError(
+            f"Validation data not found: "
+            f"{validation_path}"
+        )
+
     predictions = load_jsonl(
-        PREDICTIONS_PATH
+        predictions_path
     )
 
     validation = load_jsonl(
-        VALIDATION_PATH
+        validation_path
     )
 
     if len(predictions) != len(validation):
@@ -191,6 +283,21 @@ def main():
             "Prediction count does not match "
             "validation count."
         )
+
+    print("\nEVALUATING")
+    print("-" * 55)
+
+    print(
+        f"Experiment  : {args.name}"
+    )
+
+    print(
+        f"Predictions : {predictions_path}"
+    )
+
+    print(
+        f"Examples    : {len(predictions)}"
+    )
 
     rows = []
 
@@ -205,12 +312,16 @@ def main():
 
     evidence_scores = []
 
+    # --------------------------------------------------
+    # Evaluate every prediction
+    # --------------------------------------------------
+
     for prediction_record, validation_record in zip(
         predictions,
         validation,
     ):
-        # Check that prediction order matches
-        # the original validation dataset.
+        # Make sure predictions correspond to
+        # the correct validation example.
         if (
             prediction_record["contract"]
             != validation_record["contract"]
@@ -231,8 +342,12 @@ def main():
             gold_result["present"]
         )
 
-        parsed, json_valid = parse_prediction(
-            prediction_record["prediction"]
+        parsed, json_valid = (
+            parse_prediction(
+                prediction_record[
+                    "prediction"
+                ]
+            )
         )
 
         if json_valid:
@@ -245,6 +360,7 @@ def main():
 
         if schema_valid:
             valid_schema_count += 1
+
             predicted_label = bool(
                 parsed["present"]
             )
@@ -252,12 +368,13 @@ def main():
         else:
             predicted_label = None
 
-        # Invalid JSON/schema should count as
+        # Invalid JSON/schema counts as
         # an incorrect classification.
         if predicted_label is None:
             strict_prediction = (
                 not gold_label
             )
+
         else:
             strict_prediction = (
                 predicted_label
@@ -274,9 +391,10 @@ def main():
         grounded = None
         current_evidence_f1 = None
 
-        # -------------------------
+        # --------------------------------------------------
         # Evidence grounding
-        # -------------------------
+        # --------------------------------------------------
+
         if (
             schema_valid
             and parsed["present"]
@@ -304,11 +422,12 @@ def main():
             if grounded:
                 grounded_evidence_count += 1
 
-        # -------------------------
-        # Evidence F1
-        # -------------------------
-        # Calculate on gold-positive examples.
-        # False negatives receive F1 = 0.
+        # --------------------------------------------------
+        # Evidence token F1
+        # --------------------------------------------------
+
+        # Evaluate evidence on all gold-positive
+        # examples. False negatives get F1 = 0.
         if gold_label:
             gold_evidence = (
                 gold_result["evidence"]
@@ -345,16 +464,24 @@ def main():
                         "category"
                     ]
                 ),
-                "gold_present": gold_label,
+                "gold_present": (
+                    gold_label
+                ),
                 "predicted_present": (
                     predicted_label
                 ),
                 "strict_prediction": (
                     strict_prediction
                 ),
-                "json_valid": json_valid,
-                "schema_valid": schema_valid,
-                "grounded_evidence": grounded,
+                "json_valid": (
+                    json_valid
+                ),
+                "schema_valid": (
+                    schema_valid
+                ),
+                "grounded_evidence": (
+                    grounded
+                ),
                 "evidence_f1": (
                     current_evidence_f1
                 ),
@@ -370,9 +497,9 @@ def main():
         rows
     )
 
-    # -------------------------
-    # Overall classification
-    # -------------------------
+    # --------------------------------------------------
+    # Classification metrics
+    # --------------------------------------------------
 
     accuracy = accuracy_score(
         gold_labels,
@@ -404,9 +531,9 @@ def main():
         zero_division=0,
     )
 
-    # -------------------------
+    # --------------------------------------------------
     # Output quality
-    # -------------------------
+    # --------------------------------------------------
 
     total_examples = len(
         results_df
@@ -422,9 +549,9 @@ def main():
         / total_examples
     )
 
-    # -------------------------
+    # --------------------------------------------------
     # Evidence metrics
-    # -------------------------
+    # --------------------------------------------------
 
     grounded_evidence_rate = (
         grounded_evidence_count
@@ -452,12 +579,19 @@ def main():
         ].mean()
     )
 
+    # --------------------------------------------------
+    # Summary
+    # --------------------------------------------------
+
     summary = {
+        "experiment": (
+            args.name
+        ),
         "model": (
-            "Qwen/Qwen2.5-7B-Instruct"
+            args.model
         ),
         "evaluation_split": (
-            "validation"
+            args.split
         ),
         "total_examples": (
             total_examples
@@ -508,17 +642,17 @@ def main():
         ),
     }
 
-    # -------------------------
+    # --------------------------------------------------
     # Per-category metrics
-    # -------------------------
+    # --------------------------------------------------
 
     category_results = []
 
     for category, group in (
-        results_df.groupby("category")
+        results_df.groupby(
+            "category"
+        )
     ):
-        # Explicit bool conversion fixes:
-        # "mix of binary and unknown targets"
         category_gold = (
             group["gold_present"]
             .astype(bool)
@@ -526,7 +660,9 @@ def main():
         )
 
         category_predicted = (
-            group["strict_prediction"]
+            group[
+                "strict_prediction"
+            ]
             .astype(bool)
             .to_numpy()
         )
@@ -534,10 +670,15 @@ def main():
         category_results.append(
             {
                 "category": category,
-                "examples": len(group),
+
+                "examples": len(
+                    group
+                ),
+
                 "positive_examples": int(
                     category_gold.sum()
                 ),
+
                 "precision": round(
                     precision_score(
                         category_gold,
@@ -546,6 +687,7 @@ def main():
                     ),
                     4,
                 ),
+
                 "recall": round(
                     recall_score(
                         category_gold,
@@ -554,6 +696,7 @@ def main():
                     ),
                     4,
                 ),
+
                 "f1": round(
                     f1_score(
                         category_gold,
@@ -572,18 +715,32 @@ def main():
         ascending=True,
     )
 
-    # -------------------------
+    # --------------------------------------------------
     # Save results
-    # -------------------------
+    # --------------------------------------------------
 
-    OUTPUT_DIR.mkdir(
+    output_dir.mkdir(
         parents=True,
         exist_ok=True,
     )
 
+    metrics_path = (
+        output_dir
+        / f"{args.name}_metrics.json"
+    )
+
+    category_path = (
+        output_dir
+        / f"{args.name}_category_metrics.csv"
+    )
+
+    details_path = (
+        output_dir
+        / f"{args.name}_evaluation_details.csv"
+    )
+
     with open(
-        OUTPUT_DIR
-        / "qwen_zero_shot_metrics.json",
+        metrics_path,
         "w",
         encoding="utf-8",
     ) as f:
@@ -594,24 +751,23 @@ def main():
         )
 
     category_df.to_csv(
-        OUTPUT_DIR
-        / "qwen_zero_shot_category_metrics.csv",
+        category_path,
         index=False,
     )
 
     results_df.to_csv(
-        OUTPUT_DIR
-        / "qwen_zero_shot_evaluation_details.csv",
+        details_path,
         index=False,
     )
 
-    # -------------------------
+    # --------------------------------------------------
     # Print results
-    # -------------------------
+    # --------------------------------------------------
 
     print(
-        "\nQWEN ZERO-SHOT BASELINE"
+        f"\n{args.name.upper()}"
     )
+
     print("-" * 55)
 
     for key, value in summary.items():
@@ -622,6 +778,7 @@ def main():
     print(
         "\nPER-CATEGORY PERFORMANCE"
     )
+
     print("-" * 80)
 
     print(
@@ -631,9 +788,20 @@ def main():
     )
 
     print(
-        "\nEvaluation results saved to:"
+        "\nEvaluation results saved:"
     )
-    print(OUTPUT_DIR)
+
+    print(
+        f"Metrics    : {metrics_path}"
+    )
+
+    print(
+        f"Categories : {category_path}"
+    )
+
+    print(
+        f"Details    : {details_path}"
+    )
 
 
 if __name__ == "__main__":
