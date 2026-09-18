@@ -33,7 +33,7 @@ OUTPUT_PATH = (
 
 MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
 
-MAX_NEW_TOKENS = 150
+MAX_NEW_TOKENS = 256
 
 
 def load_jsonl(path):
