@@ -1,0 +1,287 @@
+{
+  "base_model": "Qwen/Qwen2.5-7B-Instruct",
+  "adapter": "artifacts/qwen_dora_r8/final_adapter",
+  "summary": {
+    "total_prompts": 15,
+    "base_passed": 15,
+    "base_pass_rate": 1.0,
+    "finetuned_passed": 15,
+    "finetuned_pass_rate": 1.0,
+    "regression_count": 0,
+    "regressions": []
+  },
+  "base_results": [
+    {
+      "id": "math_1",
+      "category": "reasoning",
+      "prompt": "A factory produces 120 units per hour. How many units are produced in 7 hours? Answer with only the number.",
+      "expected": "840",
+      "output": "840",
+      "passed": true
+    },
+    {
+      "id": "math_2",
+      "category": "reasoning",
+      "prompt": "Calculate 1000 - 375. Answer with only the number.",
+      "expected": "625",
+      "output": "625",
+      "passed": true
+    },
+    {
+      "id": "reasoning_1",
+      "category": "reasoning",
+      "prompt": "If today is Monday, what day will it be three days later? Answer with only the day.",
+      "expected": "Thursday",
+      "output": "Thursday",
+      "passed": true
+    },
+    {
+      "id": "factual_1",
+      "category": "general_qa",
+      "prompt": "What is the capital of Japan? Answer with only the city name.",
+      "expected": "Tokyo",
+      "output": "Tokyo",
+      "passed": true
+    },
+    {
+      "id": "factual_2",
+      "category": "general_qa",
+      "prompt": "Which planet is known as the Red Planet? Answer with only the planet name.",
+      "expected": "Mars",
+      "output": "Mars",
+      "passed": true
+    },
+    {
+      "id": "instruction_1",
+      "category": "instruction_following",
+      "prompt": "Respond with exactly the word BLUE and nothing else.",
+      "expected": "BLUE",
+      "output": "BLUE",
+      "passed": true
+    },
+    {
+      "id": "instruction_2",
+      "category": "instruction_following",
+      "prompt": "Convert the word 'enterprise' to uppercase. Return only the converted word.",
+      "expected": "ENTERPRISE",
+      "output": "ENTERPRISE",
+      "passed": true
+    },
+    {
+      "id": "sorting_1",
+      "category": "reasoning",
+      "prompt": "Sort these numbers in ascending order: 9, 2, 7, 1. Return only: 1, 2, 7, 9",
+      "expected": "1, 2, 7, 9",
+      "output": "1, 2, 7, 9",
+      "passed": true
+    },
+    {
+      "id": "json_1",
+      "category": "structured_output",
+      "prompt": "Return the following information as valid JSON only.\n\nName: Alice\nDepartment: Finance\nLocation: London\n\nUse exactly these keys:\nname\ndepartment\nlocation",
+      "expected": {
+        "name": "Alice",
+        "department": "Finance",
+        "location": "London"
+      },
+      "output": "{\n  \"name\": \"Alice\",\n  \"department\": \"Finance\",\n  \"location\": \"London\"\n}",
+      "passed": true
+    },
+    {
+      "id": "json_2",
+      "category": "structured_output",
+      "prompt": "Return valid JSON only.\n\nProduct: Sensor\nQuantity: 12\nAvailable: true\n\nUse keys:\nproduct\nquantity\navailable",
+      "expected": {
+        "product": "Sensor",
+        "quantity": 12,
+        "available": true
+      },
+      "output": "{\n  \"product\": \"Sensor\",\n  \"quantity\": 12,\n  \"available\": true\n}",
+      "passed": true
+    },
+    {
+      "id": "classification_1",
+      "category": "classification",
+      "prompt": "Classify the sentiment of this sentence as POSITIVE or NEGATIVE.\n\n\"The system worked correctly and completed the task successfully.\"\n\nReturn only the label.",
+      "expected": "POSITIVE",
+      "output": "POSITIVE",
+      "passed": true
+    },
+    {
+      "id": "classification_2",
+      "category": "classification",
+      "prompt": "Classify the sentiment of this sentence as POSITIVE or NEGATIVE.\n\n\"The application repeatedly failed and produced incorrect results.\"\n\nReturn only the label.",
+      "expected": "NEGATIVE",
+      "output": "NEGATIVE",
+      "passed": true
+    },
+    {
+      "id": "extraction_1",
+      "category": "information_extraction",
+      "prompt": "Extract only the person's name from this sentence:\n\n\"Sarah Johnson joined Acme Corporation in 2024.\"\n\nReturn only the name.",
+      "expected": "Sarah Johnson",
+      "output": "Sarah Johnson",
+      "passed": true
+    },
+    {
+      "id": "summary_1",
+      "category": "summarization",
+      "prompt": "Summarize the following in one short sentence:\n\nMachine learning systems should be monitored after deployment because\ndata distributions may change over time, causing model performance to degrade.",
+      "expected": [
+        "monitor",
+        "data",
+        "performance"
+      ],
+      "output": "Machine learning models need post-deployment monitoring due to potential shifts in data distribution that can diminish performance.",
+      "passed": true
+    },
+    {
+      "id": "summary_2",
+      "category": "summarization",
+      "prompt": "Summarize the following in one short sentence:\n\nPredictive maintenance uses equipment data to identify early signs of\nfailure so maintenance can be performed before an unexpected breakdown.",
+      "expected": [
+        "maintenance",
+        "failure"
+      ],
+      "output": "Predictive maintenance analyzes equipment data to detect early failure indicators, enabling timely repairs to prevent unexpected breakdowns.",
+      "passed": true
+    }
+  ],
+  "finetuned_results": [
+    {
+      "id": "math_1",
+      "category": "reasoning",
+      "prompt": "A factory produces 120 units per hour. How many units are produced in 7 hours? Answer with only the number.",
+      "expected": "840",
+      "output": "840",
+      "passed": true
+    },
+    {
+      "id": "math_2",
+      "category": "reasoning",
+      "prompt": "Calculate 1000 - 375. Answer with only the number.",
+      "expected": "625",
+      "output": "625",
+      "passed": true
+    },
+    {
+      "id": "reasoning_1",
+      "category": "reasoning",
+      "prompt": "If today is Monday, what day will it be three days later? Answer with only the day.",
+      "expected": "Thursday",
+      "output": "Thursday",
+      "passed": true
+    },
+    {
+      "id": "factual_1",
+      "category": "general_qa",
+      "prompt": "What is the capital of Japan? Answer with only the city name.",
+      "expected": "Tokyo",
+      "output": "Tokyo",
+      "passed": true
+    },
+    {
+      "id": "factual_2",
+      "category": "general_qa",
+      "prompt": "Which planet is known as the Red Planet? Answer with only the planet name.",
+      "expected": "Mars",
+      "output": "Mars",
+      "passed": true
+    },
+    {
+      "id": "instruction_1",
+      "category": "instruction_following",
+      "prompt": "Respond with exactly the word BLUE and nothing else.",
+      "expected": "BLUE",
+      "output": "BLUE",
+      "passed": true
+    },
+    {
+      "id": "instruction_2",
+      "category": "instruction_following",
+      "prompt": "Convert the word 'enterprise' to uppercase. Return only the converted word.",
+      "expected": "ENTERPRISE",
+      "output": "ENTERPRISE",
+      "passed": true
+    },
+    {
+      "id": "sorting_1",
+      "category": "reasoning",
+      "prompt": "Sort these numbers in ascending order: 9, 2, 7, 1. Return only: 1, 2, 7, 9",
+      "expected": "1, 2, 7, 9",
+      "output": "1, 2, 7, 9",
+      "passed": true
+    },
+    {
+      "id": "json_1",
+      "category": "structured_output",
+      "prompt": "Return the following information as valid JSON only.\n\nName: Alice\nDepartment: Finance\nLocation: London\n\nUse exactly these keys:\nname\ndepartment\nlocation",
+      "expected": {
+        "name": "Alice",
+        "department": "Finance",
+        "location": "London"
+      },
+      "output": "{\n  \"name\": \"Alice\",\n  \"department\": \"Finance\",\n  \"location\": \"London\"\n}",
+      "passed": true
+    },
+    {
+      "id": "json_2",
+      "category": "structured_output",
+      "prompt": "Return valid JSON only.\n\nProduct: Sensor\nQuantity: 12\nAvailable: true\n\nUse keys:\nproduct\nquantity\navailable",
+      "expected": {
+        "product": "Sensor",
+        "quantity": 12,
+        "available": true
+      },
+      "output": "{\"product\": \"Sensor\", \"quantity\": 12, \"available\": true}",
+      "passed": true
+    },
+    {
+      "id": "classification_1",
+      "category": "classification",
+      "prompt": "Classify the sentiment of this sentence as POSITIVE or NEGATIVE.\n\n\"The system worked correctly and completed the task successfully.\"\n\nReturn only the label.",
+      "expected": "POSITIVE",
+      "output": "POSITIVE",
+      "passed": true
+    },
+    {
+      "id": "classification_2",
+      "category": "classification",
+      "prompt": "Classify the sentiment of this sentence as POSITIVE or NEGATIVE.\n\n\"The application repeatedly failed and produced incorrect results.\"\n\nReturn only the label.",
+      "expected": "NEGATIVE",
+      "output": "NEGATIVE",
+      "passed": true
+    },
+    {
+      "id": "extraction_1",
+      "category": "information_extraction",
+      "prompt": "Extract only the person's name from this sentence:\n\n\"Sarah Johnson joined Acme Corporation in 2024.\"\n\nReturn only the name.",
+      "expected": "Sarah Johnson",
+      "output": "Sarah Johnson",
+      "passed": true
+    },
+    {
+      "id": "summary_1",
+      "category": "summarization",
+      "prompt": "Summarize the following in one short sentence:\n\nMachine learning systems should be monitored after deployment because\ndata distributions may change over time, causing model performance to degrade.",
+      "expected": [
+        "monitor",
+        "data",
+        "performance"
+      ],
+      "output": "Machine learning models need post-deployment monitoring due to potential shifts in data distribution that can diminish performance.",
+      "passed": true
+    },
+    {
+      "id": "summary_2",
+      "category": "summarization",
+      "prompt": "Summarize the following in one short sentence:\n\nPredictive maintenance uses equipment data to identify early signs of\nfailure so maintenance can be performed before an unexpected breakdown.",
+      "expected": [
+        "maintenance",
+        "failure"
+      ],
+      "output": "Predictive maintenance analyzes equipment data to detect early failure indicators, enabling timely repairs to prevent unexpected breakdowns.",
+      "passed": true
+    }
+  ]
+}
