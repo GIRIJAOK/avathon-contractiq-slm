@@ -1,0 +1,9 @@
+category,examples,positive_examples,precision,recall,f1
+Exclusivity,76,23,0.8947,0.7391,0.8095
+Change Of Control,76,15,0.9286,0.8667,0.8966
+Termination For Convenience,76,25,0.9167,0.88,0.898
+Notice Period To Terminate Renewal,76,13,0.8667,1.0,0.9286
+Uncapped Liability,76,11,0.9167,1.0,0.9565
+Cap On Liability,76,32,0.9688,0.9688,0.9688
+Renewal Term,76,18,0.9474,1.0,0.973
+Audit Rights,76,29,1.0,0.9655,0.9825

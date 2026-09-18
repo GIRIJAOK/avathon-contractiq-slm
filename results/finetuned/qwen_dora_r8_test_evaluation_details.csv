@@ -1,0 +1,617 @@
+contract,category,gold_present,predicted_present,strict_prediction,json_valid,schema_valid,grounded_evidence,evidence_f1,latency_seconds
+LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT,Renewal Term,True,True,True,True,True,True,1.0,2.501
+LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4297
+LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT,Exclusivity,True,True,True,True,True,True,0.33333333333333337,2.2805
+LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4443
+LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4408
+LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4358
+LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4435
+LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4385
+"WHITESMOKE,INC_11_08_2011-EX-10.26-PROMOTION AND DISTRIBUTION AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4532
+"WHITESMOKE,INC_11_08_2011-EX-10.26-PROMOTION AND DISTRIBUTION AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4489
+"WHITESMOKE,INC_11_08_2011-EX-10.26-PROMOTION AND DISTRIBUTION AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4462
+"WHITESMOKE,INC_11_08_2011-EX-10.26-PROMOTION AND DISTRIBUTION AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4517
+"WHITESMOKE,INC_11_08_2011-EX-10.26-PROMOTION AND DISTRIBUTION AGREEMENT",Change Of Control,True,True,True,True,True,True,0.2933333333333333,2.4086
+"WHITESMOKE,INC_11_08_2011-EX-10.26-PROMOTION AND DISTRIBUTION AGREEMENT",Audit Rights,True,True,True,True,True,True,1.0,1.4801
+"WHITESMOKE,INC_11_08_2011-EX-10.26-PROMOTION AND DISTRIBUTION AGREEMENT",Uncapped Liability,True,True,True,True,True,True,0.7551020408163265,1.9152
+"WHITESMOKE,INC_11_08_2011-EX-10.26-PROMOTION AND DISTRIBUTION AGREEMENT",Cap On Liability,True,True,True,True,True,True,0.7551020408163265,1.9151
+"FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",Renewal Term,True,True,True,True,True,True,1.0,1.7655
+"FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,1.7307
+"FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4523
+"FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",Termination For Convenience,True,False,False,True,True,,0.0,0.4511
+"FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",Change Of Control,False,False,False,True,True,,,0.46
+"FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",Audit Rights,True,False,False,True,True,,0.0,0.4526
+"FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4485
+"FTENETWORKS,INC_02_18_2016-EX-99.4-STRATEGIC ALLIANCE AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.4462
+BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT,Renewal Term,False,False,False,True,True,,,0.45
+BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.45
+BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT,Exclusivity,True,True,True,True,True,True,0.32380952380952377,2.2699
+BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT,Termination For Convenience,True,True,True,True,True,True,1.0,3.1005
+BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT,Change Of Control,False,True,True,True,True,True,,2.244
+BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT,Audit Rights,True,True,True,True,True,True,0.1935483870967742,1.0872
+BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4516
+BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4554
+OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT,Renewal Term,True,False,False,True,True,,0.0,0.4357
+OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4352
+OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4447
+OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4369
+OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4359
+OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT,Audit Rights,True,True,True,True,True,True,1.0,2.3771
+OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT,Uncapped Liability,True,False,False,True,True,,0.0,0.4305
+OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT,Cap On Liability,True,True,True,True,True,True,1.0,2.1055
+MSCIINC_02_28_2008-EX-10.10-,Renewal Term,False,False,False,True,True,,,0.4322
+MSCIINC_02_28_2008-EX-10.10-,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4404
+MSCIINC_02_28_2008-EX-10.10-,Exclusivity,False,False,False,True,True,,,0.4618
+MSCIINC_02_28_2008-EX-10.10-,Termination For Convenience,False,False,False,True,True,,,0.4437
+MSCIINC_02_28_2008-EX-10.10-,Change Of Control,False,False,False,True,True,,,0.4459
+MSCIINC_02_28_2008-EX-10.10-,Audit Rights,False,False,False,True,True,,,0.4502
+MSCIINC_02_28_2008-EX-10.10-,Uncapped Liability,False,True,True,True,True,True,,2.845
+MSCIINC_02_28_2008-EX-10.10-,Cap On Liability,True,True,True,True,True,True,0.40384615384615385,2.8327
+Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement,Renewal Term,False,False,False,True,True,,,0.4346
+Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4259
+Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement,Exclusivity,False,False,False,True,True,,,0.4307
+Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement,Termination For Convenience,True,True,True,True,True,True,0.14285714285714285,1.8333
+Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement,Change Of Control,False,False,False,True,True,,,0.4311
+Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement,Audit Rights,False,False,False,True,True,,,0.4275
+Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement,Uncapped Liability,False,False,False,True,True,,,0.4379
+Principal Life Insurance Company - Broker Dealer Marketing and Servicing Agreement,Cap On Liability,False,False,False,True,True,,,0.4294
+WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4274
+WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4301
+WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT,Exclusivity,False,False,False,True,True,,,0.446
+WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT,Termination For Convenience,True,True,True,True,True,True,0.9818181818181818,2.3217
+WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4343
+WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4316
+WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.437
+WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4383
+"WASTE2ENERGYHOLDINGS,INC_06_03_2010-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4458
+"WASTE2ENERGYHOLDINGS,INC_06_03_2010-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4489
+"WASTE2ENERGYHOLDINGS,INC_06_03_2010-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4449
+"WASTE2ENERGYHOLDINGS,INC_06_03_2010-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.442
+"WASTE2ENERGYHOLDINGS,INC_06_03_2010-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4427
+"WASTE2ENERGYHOLDINGS,INC_06_03_2010-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4445
+"WASTE2ENERGYHOLDINGS,INC_06_03_2010-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4438
+"WASTE2ENERGYHOLDINGS,INC_06_03_2010-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.4438
+ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT,Renewal Term,False,False,False,True,True,,,0.433
+ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4434
+ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4375
+ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT,Termination For Convenience,True,True,True,True,True,True,0.9500000000000001,1.1968
+ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4385
+ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT,Audit Rights,True,True,True,True,True,True,1.0,1.5885
+ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.431
+ASPIRITYHOLDINGSLLC_05_07_2012-EX-10.6-OUTSOURCING AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4288
+"NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",Renewal Term,False,False,False,True,True,,,0.4272
+"NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4202
+"NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",Exclusivity,True,True,True,True,True,True,1.0,2.8858
+"NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",Termination For Convenience,False,False,False,True,True,,,0.4327
+"NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",Change Of Control,False,False,False,True,True,,,0.4292
+"NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",Audit Rights,False,False,False,True,True,,,0.4318
+"NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",Uncapped Liability,False,False,False,True,True,,,0.4333
+"NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",Cap On Liability,False,False,False,True,True,,,0.4363
+PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement,Renewal Term,True,False,False,True,True,,0.0,0.4449
+PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement,Notice Period To Terminate Renewal,True,False,False,True,True,,0.0,0.448
+PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement,Exclusivity,True,False,False,True,True,,0.0,0.4567
+PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement,Termination For Convenience,False,False,False,True,True,,,0.4507
+PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement,Change Of Control,False,False,False,True,True,,,0.4557
+PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement,Audit Rights,True,True,True,True,True,True,0.1875,1.1651
+PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement,Uncapped Liability,True,True,True,True,True,True,1.0,3.5006
+PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement,Cap On Liability,True,True,True,True,True,True,1.0,3.5563
+"OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services Agreement",Renewal Term,False,False,False,True,True,,,0.4392
+"OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services Agreement",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4534
+"OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services Agreement",Exclusivity,False,False,False,True,True,,,0.4449
+"OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services Agreement",Termination For Convenience,True,True,True,True,True,True,1.0,1.7201
+"OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services Agreement",Change Of Control,False,False,False,True,True,,,0.4528
+"OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services Agreement",Audit Rights,True,False,False,True,True,,0.0,0.4409
+"OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services Agreement",Uncapped Liability,False,False,False,True,True,,,0.447
+"OAKTREECAPITALGROUP,LLC_03_02_2020-EX-10.8-Services Agreement",Cap On Liability,False,False,False,True,True,,,0.4445
+PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement,Renewal Term,True,True,True,True,True,True,1.0,2.1051
+PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement,Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,2.0898
+PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement,Exclusivity,True,True,True,True,True,True,0.7311827956989247,2.0034
+PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement,Termination For Convenience,False,False,False,True,True,,,0.4494
+PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement,Change Of Control,False,False,False,True,True,,,0.4465
+PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement,Audit Rights,False,False,False,True,True,,,0.4459
+PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement,Uncapped Liability,False,False,False,True,True,,,0.446
+PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement,Cap On Liability,False,False,False,True,True,,,0.446
+AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement,Renewal Term,False,False,False,True,True,,,0.4291
+AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4319
+AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement,Exclusivity,True,True,True,True,True,True,0.3291139240506329,2.1805
+AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement,Termination For Convenience,True,True,True,True,True,True,0.48148148148148145,1.9228
+AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement,Change Of Control,False,False,False,True,True,,,0.4363
+AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement,Audit Rights,False,False,False,True,True,,,0.427
+AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement,Uncapped Liability,True,True,True,True,True,True,1.0,3.8702
+AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.34_11788308_EX-10.34_Sponsorship Agreement,Cap On Liability,True,True,True,True,True,True,1.0,3.9577
+"ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4514
+"ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4453
+"ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4512
+"ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4462
+"ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4486
+"ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4464
+"ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4501
+"ELFBEAUTY,INC_07_02_2020-EX-10.1-COOPERATION AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.4432
+TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation Agreement,Renewal Term,False,False,False,True,True,,,0.4761
+TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4765
+TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation Agreement,Exclusivity,False,False,False,True,True,,,0.4783
+TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation Agreement,Termination For Convenience,False,False,False,True,True,,,0.4767
+TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation Agreement,Change Of Control,False,False,False,True,True,,,0.485
+TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation Agreement,Audit Rights,False,False,False,True,True,,,0.4768
+TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation Agreement,Uncapped Liability,False,False,False,True,True,,,0.4766
+TcPipelinesLp_20160226_10-K_EX-99.12_9454048_EX-99.12_Transportation Agreement,Cap On Liability,False,True,True,True,True,True,,3.039
+AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement,Renewal Term,False,False,False,True,True,,,0.434
+AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4283
+AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement,Exclusivity,False,False,False,True,True,,,0.4314
+AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement,Termination For Convenience,False,True,True,True,True,True,,5.1961
+AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement,Change Of Control,True,True,True,True,True,True,1.0,5.1605
+AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement,Audit Rights,True,True,True,True,True,True,0.2465753424657534,0.7561
+AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement,Uncapped Liability,True,True,True,True,True,True,1.0,5.0342
+AtnInternationalInc_20191108_10-Q_EX-10.1_11878541_EX-10.1_Maintenance Agreement,Cap On Liability,True,True,True,True,True,True,0.6705882352941176,2.3806
+InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement,Renewal Term,True,True,True,True,True,True,1.0,1.7075
+InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement,Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,1.715
+InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement,Exclusivity,False,False,False,True,True,,,0.4343
+InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement,Termination For Convenience,True,True,True,True,True,True,1.0,1.65
+InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement,Change Of Control,False,False,False,True,True,,,0.4356
+InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement,Audit Rights,True,True,True,True,True,True,1.0,1.7196
+InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement,Uncapped Liability,False,False,False,True,True,,,0.4282
+InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement,Cap On Liability,True,False,False,True,True,,0.0,0.4392
+GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement,Renewal Term,True,True,True,True,True,True,1.0,1.9077
+GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement,Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,1.9185
+GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement,Exclusivity,True,True,True,True,True,True,1.0,3.9751
+GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement,Termination For Convenience,False,False,False,True,True,,,0.4403
+GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement,Change Of Control,True,True,True,True,True,True,1.0,1.9357
+GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement,Audit Rights,False,False,False,True,True,,,0.4451
+GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement,Uncapped Liability,False,False,False,True,True,,,0.4484
+GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.6_11951677_EX-10.6_License Agreement,Cap On Liability,False,False,False,True,True,,,0.4449
+SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement,Renewal Term,False,False,False,True,True,,,0.3986
+SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.3974
+SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement,Exclusivity,False,False,False,True,True,,,0.3958
+SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement,Termination For Convenience,False,False,False,True,True,,,0.4005
+SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement,Change Of Control,False,False,False,True,True,,,0.3929
+SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement,Audit Rights,False,False,False,True,True,,,0.4053
+SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement,Uncapped Liability,False,False,False,True,True,,,0.3902
+SalesforcecomInc_20171122_10-Q_EX-10.1_10961535_EX-10.1_Reseller Agreement,Cap On Liability,False,False,False,True,True,,,0.3913
+UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2,Renewal Term,True,True,True,True,True,True,1.0,3.5374
+UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2,Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,3.5033
+UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2,Exclusivity,True,True,True,True,True,True,1.0,0.9102
+UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2,Termination For Convenience,False,False,False,True,True,,,0.4414
+UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2,Change Of Control,False,False,False,True,True,,,0.4427
+UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2,Audit Rights,True,True,True,True,True,True,1.0,2.0279
+UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2,Uncapped Liability,False,False,False,True,True,,,0.4426
+UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2,Cap On Liability,False,False,False,True,True,,,0.4411
+ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT,Renewal Term,True,True,True,True,True,True,1.0,2.7913
+ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT,Notice Period To Terminate Renewal,True,False,False,True,True,,0.0,0.4294
+ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT,Exclusivity,True,True,True,True,True,True,1.0,1.9689
+ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT,Termination For Convenience,True,False,False,True,True,,0.0,0.444
+ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT,Change Of Control,True,True,True,True,True,True,1.0,2.8215
+ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4444
+ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4406
+ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT,Cap On Liability,True,True,True,True,True,True,1.0,1.9158
+"GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4312
+"GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4334
+"GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4388
+"GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",Termination For Convenience,True,True,True,True,True,True,1.0,0.9026
+"GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4408
+"GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4272
+"GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4357
+"GRIDIRONBIONUTRIENTS,INC_02_05_2020-EX-10.3-SUPPLY AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.4341
+PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement,Renewal Term,True,True,True,True,True,True,0.08888888888888888,1.2847
+PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement,Notice Period To Terminate Renewal,False,True,True,True,True,True,,1.2726
+PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement,Exclusivity,False,False,False,True,True,,,0.4523
+PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement,Termination For Convenience,True,False,False,True,True,,0.0,0.4521
+PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement,Change Of Control,False,False,False,True,True,,,0.4486
+PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement,Audit Rights,False,False,False,True,True,,,0.4481
+PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement,Uncapped Liability,True,True,True,True,True,True,0.3283582089552239,0.8521
+PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement,Cap On Liability,True,True,True,True,True,True,1.0,3.1624
+"KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",Renewal Term,False,False,False,True,True,,,0.4418
+"KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4387
+"KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",Exclusivity,False,False,False,True,True,,,0.4448
+"KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",Termination For Convenience,False,False,False,True,True,,,0.4405
+"KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",Change Of Control,False,False,False,True,True,,,0.4423
+"KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",Audit Rights,False,False,False,True,True,,,0.4526
+"KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",Uncapped Liability,False,False,False,True,True,,,0.4461
+"KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",Cap On Liability,False,False,False,True,True,,,0.4483
+TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement,Renewal Term,True,True,True,True,True,True,1.0,2.5745
+TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement,Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,2.5431
+TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement,Exclusivity,False,False,False,True,True,,,0.4461
+TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement,Termination For Convenience,False,False,False,True,True,,,0.4404
+TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement,Change Of Control,True,True,True,True,True,True,1.0,2.7478
+TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement,Audit Rights,True,True,True,True,True,True,1.0,2.0892
+TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement,Uncapped Liability,True,True,True,True,True,True,1.0,2.3442
+TomOnlineInc_20060501_20-F_EX-4.46_749700_EX-4.46_Co-Branding Agreement,Cap On Liability,True,True,True,True,True,True,1.0,2.0959
+"TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4453
+"TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4401
+"TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4445
+"TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4499
+"TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT",Change Of Control,True,True,True,True,True,True,0.9942196531791908,3.8787
+"TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT",Audit Rights,True,True,True,True,True,True,1.0,1.806
+"TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4424
+"TRANSPHORM,INC_02_14_2020-EX-10.12(1)-JOINT VENTURE AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.4542
+"ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",Renewal Term,False,False,False,True,True,,,0.4328
+"ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4407
+"ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",Exclusivity,True,True,True,True,True,True,1.0,2.7976
+"ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",Termination For Convenience,False,False,False,True,True,,,0.4411
+"ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",Change Of Control,True,True,True,True,True,True,0.2888888888888889,1.7263
+"ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",Audit Rights,False,False,False,True,True,,,0.4243
+"ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",Uncapped Liability,False,False,False,True,True,,,0.4432
+"ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",Cap On Liability,False,False,False,True,True,,,0.4415
+"XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4415
+"XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.435
+"XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",Exclusivity,True,True,True,True,True,False,1.0,2.1572
+"XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4361
+"XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",Change Of Control,False,False,False,True,True,,,0.442
+"XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4453
+"XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4449
+"XLITECHNOLOGIES,INC_12_02_2015-EX-10.02-STRATEGIC ALLIANCE AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.4383
+BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE AGREEMENT,Renewal Term,True,True,True,True,True,True,0.12735849056603776,1.4198
+BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE AGREEMENT,Notice Period To Terminate Renewal,True,False,False,True,True,,0.0,0.4224
+BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE AGREEMENT,Exclusivity,True,True,True,True,True,True,1.0,1.7154
+BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4217
+BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE AGREEMENT,Change Of Control,True,True,True,True,True,True,0.43686006825938567,2.9372
+BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE AGREEMENT,Audit Rights,True,True,True,True,True,True,0.3582089552238806,0.7943
+BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4331
+BUFFALOWILDWINGSINC_06_05_1998-EX-10.3-FRANCHISE AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4372
+"GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4461
+"GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4514
+"GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4466
+"GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",Termination For Convenience,True,True,True,True,True,True,1.0,2.3632
+"GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4415
+"GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4389
+"GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4447
+"GWG HOLDINGS, INC. - ORDERLY MARKETING AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.4404
+AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement,Renewal Term,True,True,True,True,True,True,1.0,1.515
+AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement,Notice Period To Terminate Renewal,True,False,False,True,True,,0.0,0.4444
+AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement,Exclusivity,True,True,True,True,True,True,0.9662921348314606,1.8318
+AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement,Termination For Convenience,False,False,False,True,True,,,0.4393
+AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement,Change Of Control,True,True,True,True,True,True,0.9836065573770492,1.4472
+AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement,Audit Rights,False,False,False,True,True,,,0.4405
+AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement,Uncapped Liability,False,False,False,True,True,,,0.4397
+AgapeAtpCorp_20191202_10-KA_EX-10.1_11911128_EX-10.1_Supply Agreement,Cap On Liability,False,False,False,True,True,,,0.4425
+BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement,Renewal Term,False,False,False,True,True,,,0.4472
+BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4476
+BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement,Exclusivity,True,True,True,True,True,True,0.17142857142857143,0.757
+BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement,Termination For Convenience,False,False,False,True,True,,,0.4484
+BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement,Change Of Control,True,True,True,True,True,True,0.20408163265306123,1.1738
+BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement,Audit Rights,False,False,False,True,True,,,0.4503
+BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement,Uncapped Liability,False,False,False,True,True,,,0.4483
+BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement,Cap On Liability,False,False,False,True,True,,,0.4454
+Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4293
+Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4305
+Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4397
+Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4292
+Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4296
+Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4283
+Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4268
+Quaker Chemical Corporation - NON COMPETITION AND NON SOLICITATION AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4298
+QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement,Renewal Term,False,False,False,True,True,,,0.4248
+QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4397
+QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement,Exclusivity,False,False,False,True,True,,,0.4439
+QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement,Termination For Convenience,True,True,True,True,True,True,1.0,1.8432
+QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement,Change Of Control,False,False,False,True,True,,,0.433
+QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement,Audit Rights,False,False,False,True,True,,,0.4299
+QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement,Uncapped Liability,True,True,True,True,True,True,1.0,3.0519
+QuantumGroupIncFl_20090120_8-K_EX-99.2_3672910_EX-99.2_Hosting Agreement,Cap On Liability,True,True,True,True,True,True,1.0,4.2064
+KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4412
+KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4422
+KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4436
+KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4395
+KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4408
+KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4424
+KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4398
+KENTUCKYUTILITIESCO_03_25_2003-EX-10.65-TRANSPORTATION AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4412
+MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4258
+MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4339
+MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4318
+MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4375
+MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4297
+MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4312
+MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT,Uncapped Liability,False,True,True,True,True,True,,1.498
+MERCATAINC_03_09_2000-EX-10.21-SPONSORSHIP AGREEMENT,Cap On Liability,True,True,True,True,True,True,0.7254901960784313,1.7041
+"FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",Renewal Term,True,True,True,True,True,True,0.9508196721311475,1.9627
+"FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4445
+"FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",Exclusivity,True,True,True,True,True,True,0.3617021276595745,2.867
+"FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",Termination For Convenience,True,True,True,True,True,True,1.0,1.7746
+"FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",Change Of Control,False,False,False,True,True,,,0.4512
+"FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",Audit Rights,True,True,True,True,True,True,0.9946524064171123,3.7945
+"FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",Uncapped Liability,False,False,False,True,True,,,0.4411
+"FOUNDATIONMEDICINE,INC_02_02_2015-EX-10.2-Collaboration Agreement",Cap On Liability,True,True,True,True,True,True,1.0,1.6584
+"LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",Renewal Term,True,True,True,True,True,True,1.0,2.7724
+"LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,2.7585
+"LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",Exclusivity,True,True,True,True,True,True,0.1111111111111111,1.2048
+"LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4499
+"LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4455
+"LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4408
+"LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4404
+"LEGACYTECHNOLOGYHOLDINGS,INC_12_09_2005-EX-10.2-DISTRIBUTOR AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.4411
+BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement,Renewal Term,True,True,True,True,True,True,1.0,0.856
+BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.439
+BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement,Exclusivity,True,True,True,True,True,True,1.0,5.854
+BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement,Termination For Convenience,True,True,True,True,True,True,1.0,1.0666
+BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement,Change Of Control,False,False,False,True,True,,,0.468
+BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement,Audit Rights,False,False,False,True,True,,,0.4545
+BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement,Uncapped Liability,False,False,False,True,True,,,0.4564
+BravatekSolutionsInc_20170418_8-K_EX-10.1_10205739_EX-10.1_Reseller Agreement,Cap On Liability,True,True,True,True,True,True,1.0,2.6684
+"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",Renewal Term,False,False,False,True,True,,,0.444
+"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4423
+"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4427
+"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",Termination For Convenience,False,True,True,True,True,True,,1.9882
+"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4521
+"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4525
+"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4513
+"CURAEGISTECHNOLOGIES,INC_05_26_2010-EX-1-CORPORATE SPONSORSHIP AGREEMENT",Cap On Liability,True,True,True,True,True,True,0.24390243902439024,2.0046
+MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4447
+MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4345
+MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT,Exclusivity,True,True,True,True,True,True,1.0,1.3449
+MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4504
+MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT,Change Of Control,True,True,True,True,True,True,1.0,2.0159
+MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4418
+MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4444
+MOSSIMOINC_04_14_2000-EX-10.14-ENDORSEMENT AGREEMENT,Cap On Liability,True,True,True,True,True,True,0.35051546391752575,2.7099
+BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement,Renewal Term,False,False,False,True,True,,,0.4401
+BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4379
+BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement,Exclusivity,False,False,False,True,True,,,0.4407
+BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement,Termination For Convenience,False,False,False,True,True,,,0.4409
+BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement,Change Of Control,False,False,False,True,True,,,0.4351
+BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement,Audit Rights,True,True,True,True,True,True,1.0,1.7221
+BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement,Uncapped Liability,True,True,True,True,True,True,0.9963636363636363,5.7232
+BloomEnergyCorp_20180321_DRSA (on S-1)_EX-10_11240356_EX-10_Maintenance Agreement,Cap On Liability,True,,False,False,False,,0.0,7.8738
+HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4372
+HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4304
+HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4383
+HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT,Termination For Convenience,True,True,True,True,True,True,1.0,2.6179
+HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4344
+HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4334
+HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4394
+HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4385
+VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement,Renewal Term,False,False,False,True,True,,,0.4565
+VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4578
+VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement,Exclusivity,False,False,False,True,True,,,0.4636
+VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement,Termination For Convenience,True,True,True,True,True,True,1.0,1.5066
+VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement,Change Of Control,True,False,False,True,True,,0.0,0.4586
+VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement,Audit Rights,True,True,True,True,True,True,1.0,1.0031
+VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement,Uncapped Liability,False,False,False,True,True,,,0.4594
+VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement,Cap On Liability,True,True,True,True,True,True,1.0,4.3716
+"ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4458
+"ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4339
+"ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Exclusivity,False,False,False,True,True,,,0.4378
+"ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Termination For Convenience,True,False,False,True,True,,0.0,0.4402
+"ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4432
+"ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4382
+"ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4353
+"ROCKYMOUNTAINCHOCOLATEFACTORY,INC_12_23_2019-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",Cap On Liability,False,False,False,True,True,,,0.437
+SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement,Renewal Term,True,True,True,True,True,True,1.0,3.3928
+SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement,Notice Period To Terminate Renewal,True,True,True,True,True,True,0.8854961832061068,2.8037
+SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement,Exclusivity,True,True,True,True,True,True,0.4333333333333333,1.4654
+SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement,Termination For Convenience,False,False,False,True,True,,,0.4337
+SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement,Change Of Control,False,False,False,True,True,,,0.4375
+SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement,Audit Rights,True,True,True,True,True,True,1.0,1.7515
+SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement,Uncapped Liability,False,False,False,True,True,,,0.4313
+SmartRxSystemsInc_20180914_1-A_EX1A-6 MAT CTRCT_11351705_EX1A-6 MAT CTRCT_Distributor Agreement,Cap On Liability,False,False,False,True,True,,,0.4343
+"Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4459
+"Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4459
+"Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",Exclusivity,True,True,True,True,True,True,1.0,3.3838
+"Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4466
+"Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4439
+"Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4511
+"Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4469
+"Reinsurance Group of America, Incorporated - A_R REMARKETING  AGREEMENT",Cap On Liability,True,True,True,True,True,True,1.0,2.7192
+BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4308
+BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4286
+BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT,Exclusivity,True,True,True,True,True,True,0.7724867724867724,3.1271
+BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4295
+BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT,Change Of Control,False,False,False,True,True,,,0.439
+BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT,Audit Rights,True,True,True,True,True,True,0.1523809523809524,1.3772
+BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4257
+BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT,Cap On Liability,True,True,True,True,True,True,1.0,2.1248
+HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement,Renewal Term,False,False,False,True,True,,,0.4418
+HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4389
+HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement,Exclusivity,True,True,True,True,True,True,0.8245614035087719,1.9243
+HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement,Termination For Convenience,False,False,False,True,True,,,0.4403
+HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement,Change Of Control,True,True,True,True,True,True,1.0,1.7961
+HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement,Audit Rights,True,True,True,True,True,True,1.0,1.7189
+HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement,Uncapped Liability,True,True,True,True,True,True,1.0,5.9693
+HealthcentralCom_19991108_S-1A_EX-10.27_6623292_EX-10.27_Co-Branding Agreement,Cap On Liability,True,True,True,True,True,True,1.0,5.9878
+UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT,Renewal Term,True,True,True,True,True,True,1.0,1.554
+UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT,Notice Period To Terminate Renewal,True,False,False,True,True,,0.0,0.4411
+UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4453
+UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT,Termination For Convenience,True,True,True,True,True,True,1.0,1.4874
+UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4544
+UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4425
+UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4464
+UAGHINC_04_14_2004-EX-10.18-MAINTENANCE AGREEMENT,Cap On Liability,True,True,True,True,True,True,0.4892086330935252,3.441
+SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1,Renewal Term,True,,False,False,False,,0.0,7.8347
+SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4426
+SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1,Exclusivity,True,True,True,True,True,True,1.0,2.7449
+SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1,Termination For Convenience,False,False,False,True,True,,,0.4381
+SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1,Change Of Control,True,True,True,True,True,True,0.22727272727272727,0.968
+SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1,Audit Rights,True,True,True,True,True,True,0.3157894736842105,1.5255
+SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1,Uncapped Liability,False,False,False,True,True,,,0.4454
+SoupmanInc_20150814_8-K_EX-10.1_9230148_EX-10.1_Franchise Agreement1,Cap On Liability,True,True,True,True,True,True,0.2857142857142857,2.7145
+"IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4287
+"IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4308
+"IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Exclusivity,True,True,True,True,True,True,1.0,1.9981
+"IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4308
+"IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4332
+"IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Audit Rights,True,True,True,True,True,True,0.12244897959183673,1.0621
+"IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Uncapped Liability,True,True,True,True,True,True,1.0,6.1379
+"IOVANCEBIOTHERAPEUTICS,INC_08_03_2017-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Cap On Liability,True,True,True,True,True,True,1.0,6.1295
+"DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Renewal Term,True,True,True,True,True,True,1.0,3.5895
+"DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,3.6055
+"DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Exclusivity,True,True,True,True,True,True,1.0,3.0419
+"DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4317
+"DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4389
+"DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4339
+"DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Uncapped Liability,True,True,True,True,True,True,0.391304347826087,2.0247
+"DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT",Cap On Liability,True,True,True,True,True,True,0.391304347826087,2.0568
+"PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",Renewal Term,False,False,False,True,True,,,0.4293
+"PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4348
+"PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",Exclusivity,False,False,False,True,True,,,0.4441
+"PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",Termination For Convenience,True,True,True,True,True,True,1.0,0.9348
+"PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",Change Of Control,False,False,False,True,True,,,0.4392
+"PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",Audit Rights,False,False,False,True,True,,,0.4398
+"PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",Uncapped Liability,True,True,True,True,True,True,1.0,3.276
+"PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",Cap On Liability,True,True,True,True,True,True,0.2803738317757009,3.2606
+MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4378
+MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.435
+MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4459
+MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4368
+MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4453
+MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4387
+MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4439
+MOVADOGROUPINC_04_30_2003-EX-10.28-ENDORSEMENT AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4427
+STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4314
+STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4311
+STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT,Exclusivity,False,,True,False,False,,,7.8094
+STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4378
+STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4329
+STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT,Audit Rights,True,True,True,True,True,True,0.30508474576271183,1.989
+STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT,Uncapped Liability,True,True,True,True,True,True,1.0,2.5451
+STAMPSCOMINC_06_24_1999-EX-10.18-SPONSORSHIP AGREEMENT,Cap On Liability,True,True,True,True,True,True,1.0,2.5459
+CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement,Renewal Term,True,False,False,True,True,,0.0,0.4455
+CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4474
+CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement,Exclusivity,True,True,True,True,True,True,0.8148148148148148,0.9038
+CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement,Termination For Convenience,False,False,False,True,True,,,0.4511
+CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement,Change Of Control,False,False,False,True,True,,,0.4514
+CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement,Audit Rights,False,False,False,True,True,,,0.445
+CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement,Uncapped Liability,False,False,False,True,True,,,0.4507
+CHEETAHMOBILEINC_04_22_2014-EX-10.43-Cooperation Agreement,Cap On Liability,False,False,False,True,True,,,0.4537
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3,Renewal Term,False,False,False,True,True,,,0.4476
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4462
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3,Exclusivity,False,False,False,True,True,,,0.4492
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3,Termination For Convenience,False,False,False,True,True,,,0.4473
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3,Change Of Control,False,False,False,True,True,,,0.457
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3,Audit Rights,False,False,False,True,True,,,0.4475
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3,Uncapped Liability,False,False,False,True,True,,,0.4538
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement3,Cap On Liability,False,False,False,True,True,,,0.441
+LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4348
+LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4334
+LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT,Exclusivity,True,True,True,True,True,True,0.6666666666666667,1.382
+LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4449
+LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4396
+LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4314
+LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4302
+LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4349
+SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement,Renewal Term,False,False,False,True,True,,,0.447
+SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4432
+SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement,Exclusivity,True,True,True,True,True,True,1.0,0.9215
+SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement,Termination For Convenience,False,False,False,True,True,,,0.4447
+SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement,Change Of Control,False,False,False,True,True,,,0.4465
+SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement,Audit Rights,True,True,True,True,True,True,0.4383561643835617,2.014
+SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement,Uncapped Liability,False,False,False,True,True,,,0.4406
+SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement,Cap On Liability,False,False,False,True,True,,,0.4435
+PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4278
+PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4329
+PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4451
+PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT,Termination For Convenience,True,True,True,True,True,True,1.0,1.3075
+PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4405
+PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4428
+PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4377
+PROFOUNDMEDICALCORP_08_29_2019-EX-4.5-SUPPLY AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4378
+TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT,Renewal Term,True,True,True,True,True,True,0.42500000000000004,1.4234
+TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.44
+TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4508
+TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT,Termination For Convenience,True,True,True,True,True,True,0.3428571428571428,2.2074
+TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT,Change Of Control,True,True,True,True,True,True,1.0,3.4926
+TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT,Audit Rights,True,True,True,True,True,True,1.0,1.206
+TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4551
+TRICITYBANKSHARESCORP_05_15_1998-EX-10-OUTSOURCING AGREEMENT,Cap On Liability,True,True,True,True,True,True,0.16140350877192983,1.7872
+"BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",Renewal Term,False,False,False,True,True,,,0.4377
+"BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4379
+"BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",Exclusivity,True,True,True,True,True,True,1.0,3.4485
+"BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",Termination For Convenience,False,False,False,True,True,,,0.4451
+"BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",Change Of Control,False,False,False,True,True,,,0.4487
+"BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",Audit Rights,False,False,False,True,True,,,0.4433
+"BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",Uncapped Liability,False,False,False,True,True,,,0.4452
+"BLUEHILLSBANCORP,INC_05_20_2014-EX-1.1-AGENCY AGREEMENT",Cap On Liability,True,True,True,True,True,True,1.0,2.3848
+TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement,Renewal Term,False,False,False,True,True,,,0.4511
+TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4485
+TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement,Exclusivity,False,False,False,True,True,,,0.4566
+TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement,Termination For Convenience,False,True,True,True,True,True,,2.8995
+TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement,Change Of Control,True,True,True,True,True,True,0.23214285714285715,2.9041
+TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement,Audit Rights,True,True,True,True,True,True,1.0,1.1674
+TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement,Uncapped Liability,True,True,True,True,True,True,0.7714285714285715,2.4458
+TheglobeComInc_19990503_S-1A_EX-10.20_5416126_EX-10.20_Co-Branding Agreement,Cap On Liability,True,True,True,True,True,True,0.7714285714285715,2.4435
+TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4336
+TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4366
+TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4365
+TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT,Termination For Convenience,True,True,True,True,True,True,1.0,1.428
+TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4308
+TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4323
+TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4326
+TRANSMONTAIGNEPARTNERSLLC_03_13_2020-EX-10.9-SERVICES AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4301
+"COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",Renewal Term,True,True,True,True,True,True,1.0,1.5801
+"COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",Notice Period To Terminate Renewal,True,True,True,True,True,True,1.0,1.5821
+"COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",Exclusivity,False,False,False,True,True,,,0.4443
+"COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",Termination For Convenience,True,True,True,True,True,True,1.0,1.7413
+"COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",Change Of Control,False,False,False,True,True,,,0.4438
+"COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",Audit Rights,False,False,False,True,True,,,0.4344
+"COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",Uncapped Liability,False,False,False,True,True,,,0.4415
+"COOLTECHNOLOGIES,INC_10_25_2017-EX-10.71-Strategic Alliance Agreement",Cap On Liability,False,False,False,True,True,,,0.4399
+ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4462
+ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4528
+ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4587
+ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4489
+ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4482
+ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4489
+ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4489
+ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4527
+ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement,Renewal Term,False,False,False,True,True,,,0.4397
+ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4319
+ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement,Exclusivity,True,True,True,True,True,True,0.1951219512195122,1.3233
+ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement,Termination For Convenience,True,False,False,True,True,,0.0,0.4519
+ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement,Change Of Control,True,True,True,True,True,True,1.0,1.0662
+ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement,Audit Rights,False,False,False,True,True,,,0.457
+ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement,Uncapped Liability,False,False,False,True,True,,,0.444
+ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement,Cap On Liability,False,False,False,True,True,,,0.4322
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2,Renewal Term,False,False,False,True,True,,,0.3916
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.3952
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2,Exclusivity,False,False,False,True,True,,,0.3937
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2,Termination For Convenience,False,False,False,True,True,,,0.3929
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2,Change Of Control,False,False,False,True,True,,,0.3923
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2,Audit Rights,False,False,False,True,True,,,0.394
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2,Uncapped Liability,False,False,False,True,True,,,0.4038
+BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement2,Cap On Liability,False,False,False,True,True,,,0.3987
+IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement,Renewal Term,False,False,False,True,True,,,0.4387
+IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.448
+IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement,Exclusivity,False,False,False,True,True,,,0.4452
+IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement,Termination For Convenience,False,False,False,True,True,,,0.4368
+IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement,Change Of Control,False,False,False,True,True,,,0.4385
+IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement,Audit Rights,True,True,True,True,True,True,1.0,1.684
+IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement,Uncapped Liability,True,True,True,True,True,True,1.0,3.459
+IdeanomicsInc_20160330_10-K_EX-10.26_9512211_EX-10.26_Content License Agreement,Cap On Liability,True,True,True,True,True,True,1.0,3.4616
+SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT,Renewal Term,True,True,True,True,True,True,0.28571428571428575,1.7418
+SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT,Notice Period To Terminate Renewal,True,False,False,True,True,,0.0,0.4435
+SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT,Exclusivity,False,False,False,True,True,,,0.4413
+SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4356
+SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4411
+SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4357
+SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4395
+SPHERE3DCORP_06_24_2020-EX-10.12-CONSULTING AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.435
+StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement,Renewal Term,True,True,True,True,True,True,0.6265060240963854,2.5946
+StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4413
+StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement,Exclusivity,True,True,True,True,True,True,0.18181818181818182,1.3011
+StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement,Termination For Convenience,False,False,False,True,True,,,0.4356
+StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement,Change Of Control,True,True,True,True,True,True,0.05714285714285715,0.8955
+StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement,Audit Rights,True,True,True,True,True,True,1.0,1.3951
+StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement,Uncapped Liability,False,False,False,True,True,,,0.4407
+StampscomInc_20001114_10-Q_EX-10.47_2631630_EX-10.47_Co-Branding Agreement,Cap On Liability,True,True,True,True,True,True,1.0,4.111
+WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement,Renewal Term,False,False,False,True,True,,,0.4493
+WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4536
+WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement,Exclusivity,False,False,False,True,True,,,0.4502
+WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement,Termination For Convenience,False,False,False,True,True,,,0.4549
+WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement,Change Of Control,False,False,False,True,True,,,0.4495
+WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement,Audit Rights,False,False,False,True,True,,,0.4461
+WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement,Uncapped Liability,False,True,True,True,True,False,,2.6476
+WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement,Cap On Liability,True,True,True,True,True,False,0.9523809523809523,2.678
+ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT,Renewal Term,False,False,False,True,True,,,0.4505
+ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4485
+ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT,Exclusivity,True,,False,True,False,,0.0,2.9199
+ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT,Termination For Convenience,False,False,False,True,True,,,0.4515
+ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT,Change Of Control,False,False,False,True,True,,,0.4504
+ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT,Audit Rights,False,False,False,True,True,,,0.4504
+ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT,Uncapped Liability,False,False,False,True,True,,,0.4485
+ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT,Cap On Liability,False,False,False,True,True,,,0.4507
+GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1,Renewal Term,False,False,False,True,True,,,0.4344
+GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1,Notice Period To Terminate Renewal,False,False,False,True,True,,,0.4355
+GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1,Exclusivity,True,False,False,True,True,,0.0,0.4364
+GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1,Termination For Convenience,False,False,False,True,True,,,0.4358
+GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1,Change Of Control,True,True,True,True,True,True,1.0,3.1007
+GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1,Audit Rights,True,True,True,True,True,True,1.0,1.8153
+GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1,Uncapped Liability,False,False,False,True,True,,,0.4346
+GluMobileInc_20070319_S-1A_EX-10.09_436630_EX-10.09_Content License Agreement1,Cap On Liability,True,True,True,True,True,True,1.0,2.5991

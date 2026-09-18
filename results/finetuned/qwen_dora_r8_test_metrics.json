@@ -1,0 +1,17 @@
+{
+  "experiment": "qwen_dora_r8_test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "evaluation_split": "test",
+  "total_examples": 616,
+  "accuracy": 0.9448,
+  "precision": 0.9451,
+  "recall": 0.8776,
+  "f1": 0.9101,
+  "macro_f1": 0.9351,
+  "valid_json_rate": 0.9951,
+  "valid_schema_rate": 0.9935,
+  "evidence_token_f1": 0.7054,
+  "grounded_evidence_rate": 0.9834,
+  "unsupported_evidence_rate": 0.0166,
+  "average_latency_seconds": 1.039
+}
